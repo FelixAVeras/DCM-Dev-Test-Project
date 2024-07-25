@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClaimProcessing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ab2184016a2f4327d15c525a14ce6b8872e6f34")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClaimProcessing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClaimProcessing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

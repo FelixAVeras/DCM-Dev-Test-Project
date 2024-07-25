@@ -72,11 +72,22 @@ public class ClaimProcessor {
     {
         decimal price = claim.TotalCharges;
 
-        // Apply especific price rules
+        // Rule: Urban & Rural Hospitals outlier reduction for patients under 21 years
         if (claim.Age < 21)
         {
-            // Urban & Rural Hospitals, outlier is reduced 10%
             price *= 0.9m;
+        }
+
+        // Rule: Additional reduction for claims with score "720-4"
+        if (claim.Score == "720-4")
+        {
+            price *= 0.95m;
+        }
+
+        // Rule: Apply outlier reduction for a long LOS (Length of Stay)
+        if (claim.LOS > 15)
+        {
+            price *= 0.85m;
         }
 
         return price;
@@ -107,4 +118,6 @@ public class ClaimProcessor {
             _context.RuleHits.Add(new RuleHit { ClaimId = claim.ClaimId, RuleId = "-1" });
         }
     }
+
+    
 }
