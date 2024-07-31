@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\pruebas\\ClaimProcessing\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|d:\\pruebas\\claimprocessing\\claimprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|solutionrelative:claimprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|d:\\pruebas\\claimprocessing\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|d:\\pruebas\\claimprocessing\\hospitalrateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|solutionrelative:hospitalrateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|d:\\pruebas\\claimprocessing\\models\\hospitalrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|solutionrelative:models\\hospitalrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|d:\\pruebas\\claimprocessing\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|d:\\pruebas\\claimprocessing\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EAB3FA59-C432-4934-A87D-BC14BF1B374B}|ClaimProcessing.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HospitalRateService.cs",
+              "DocumentMoniker": "D:\\pruebas\\ClaimProcessing\\HospitalRateService.cs",
+              "RelativeDocumentMoniker": "HospitalRateService.cs",
+              "ToolTip": "D:\\pruebas\\ClaimProcessing\\HospitalRateService.cs",
+              "RelativeToolTip": "HospitalRateService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBcAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T22:05:07.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HospitalRate.cs",
+              "DocumentMoniker": "D:\\pruebas\\ClaimProcessing\\Models\\HospitalRate.cs",
+              "RelativeDocumentMoniker": "Models\\HospitalRate.cs",
+              "ToolTip": "D:\\pruebas\\ClaimProcessing\\Models\\HospitalRate.cs",
+              "RelativeToolTip": "Models\\HospitalRate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T21:45:09.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "D:\\pruebas\\ClaimProcessing\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "Data\\DataContext.cs",
+              "ToolTip": "D:\\pruebas\\ClaimProcessing\\Data\\DataContext.cs",
+              "RelativeToolTip": "Data\\DataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T20:56:14.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\pruebas\\ClaimProcessing\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\pruebas\\ClaimProcessing\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-26T18:52:38.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\pruebas\\ClaimProcessing\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\pruebas\\ClaimProcessing\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAwwI0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T18:52:00.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClaimProcessor.cs",
+              "DocumentMoniker": "D:\\pruebas\\ClaimProcessing\\ClaimProcessor.cs",
+              "RelativeDocumentMoniker": "ClaimProcessor.cs",
+              "ToolTip": "D:\\pruebas\\ClaimProcessing\\ClaimProcessor.cs",
+              "RelativeToolTip": "ClaimProcessor.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAowF4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T18:51:24.871Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

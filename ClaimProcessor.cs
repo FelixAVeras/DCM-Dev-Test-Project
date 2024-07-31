@@ -1,3 +1,4 @@
+using ClaimProcessing.Models;
 using Microsoft.EntityFrameworkCore;
 
 public class ClaimProcessor {
@@ -118,6 +119,4 @@ public class ClaimProcessor {
             _context.RuleHits.Add(new RuleHit { ClaimId = claim.ClaimId, RuleId = "-1" });
         }
     }
-
-    
 }

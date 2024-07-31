@@ -1,4 +1,6 @@
+using System.Globalization;
 using ClaimProcessing.Data;
+using ClaimProcessing.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -46,10 +48,114 @@ public class SeedDB
                 new() { ClaimId = 490575, Score = "639-3", NPI = "1477643690", DOB = new DateTime(1962, 5, 11), Age = 60, StartDate = new DateTime(2022, 4, 7), EndDate = new DateTime(2022, 4, 26), LOS = 19, TotalCharges = 152584.53M },
                 new() { ClaimId = 490579, Score = "662-3", NPI = "1003885641", DOB = new DateTime(1945, 12, 20), Age = 76, StartDate = new DateTime(2021, 11, 28), EndDate = new DateTime(2021, 12, 1), LOS = 3, TotalCharges = 54005.39M },
                 new() { ClaimId = 490585, Score = "810-3", NPI = "1447228747", DOB = new DateTime(1941, 2, 2), Age = 81, StartDate = new DateTime(2022, 1, 9), EndDate = new DateTime(2022, 1, 13), LOS = 4, TotalCharges = 81122.80M },
-                new() { ClaimId = 490587, Score = "930-4", NPI = "1851343909", DOB = new DateTime(2020, 2, 23), Age = 2, StartDate = new DateTime(2022, 1, 20), EndDate = new DateTime(2022, 2, 22), LOS = 33, TotalCharges = 459560.04M }
+                new() { ClaimId = 490587, Score = "930-4", NPI = "1851343909", DOB = new DateTime(2020, 2, 23), Age = 2, StartDate = new DateTime(2022, 1, 20), EndDate = new DateTime(2022, 2, 22), LOS = 33, TotalCharges = 459560.04M },
+                // Record for "Audit" (LOS <= 5)
+                new() {
+                    ClaimId = 490588,
+                    Score = "123-4",
+                    NPI = "1851343910",
+                    DOB = new DateTime(2015, 5, 15),
+                    Age = 9,
+                    StartDate = new DateTime(2023, 2, 1),
+                    EndDate = new DateTime(2023, 2, 5), // LOS = 5
+                    LOS = 5,
+                    TotalCharges = 5000.00M
+                },
+
+                // Record for "Close" (LOS >= 10)
+                new() {
+                    ClaimId = 490589,
+                    Score = "456-4",
+                    NPI = "1851343911",
+                    DOB = new DateTime(2010, 7, 30),
+                    Age = 13,
+                    StartDate = new DateTime(2023, 1, 1),
+                    EndDate = new DateTime(2023, 1, 15), // LOS = 15
+                    LOS = 15,
+                    TotalCharges = 15000.00M
+                },
+
+                // Record for "Human Review" (LOS > 5 y < 10)
+                new() {
+                    ClaimId = 490590,
+                    Score = "789-4",
+                    NPI = "1851343912",
+                    DOB = new DateTime(2018, 8, 20),
+                    Age = 6,
+                    StartDate = new DateTime(2023, 3, 1),
+                    EndDate = new DateTime(2023, 3, 6), // LOS = 6
+                    LOS = 6,
+                    TotalCharges = 8000.00M
+                }
             };
 
             await _context.Claims.AddRangeAsync(claims);
+            await _context.SaveChangesAsync();
+        }
+
+        if (!_context.HospitalRates.Any()) {
+            if (await _context.HospitalRates.AnyAsync())
+            {
+                Console.WriteLine("La base de datos ya contiene datos.");
+                
+                return;
+            }
+
+            var hospitalRates = new List<HospitalRate>{
+                new() {
+                    NPI = 1003885641,
+                    Month = "September2021",
+                    NpiMonth = "1003885641September2021",
+                    IpRate = 41,
+                    ProviderName = "CHRISTUS SPOHN HEALTH SYSTEM CORPORATION",
+                    HospitalPhysicalCity = "ALICE, TX 78332-4260",
+                    HospitalPhysicalStreetAddress = "2500 E MAIN ST",
+                    HospitalClass = "Rural",
+                    SDA = 8228.94m,
+                    DeliverySDA = 9501.94m,
+                    PPR_PPC = -2.0M,
+                    Contract = 102,
+                    HundredPercent = 100,
+                    HHSC_Publish_Date = DateTime.ParseExact("agosto 2021", "MMMM yyyy", CultureInfo.CreateSpecificCulture("es-ES")),
+                    CHIRP_Rate = 34
+                },
+                new() {
+                    NPI = 1003885641,
+                    Month = "October2021",
+                    NpiMonth = "1003885641October2021",
+                    IpRate = 41,
+                    ProviderName = "CHRISTUS SPOHN HEALTH SYSTEM CORPORATION",
+                    HospitalPhysicalCity = "ALICE, TX 78332-4261",
+                    HospitalPhysicalStreetAddress = "2500 E MAIN ST",
+                    HospitalClass = "Rural",
+                    SDA = 8228.94m,
+                    DeliverySDA = 9501.94m,
+                    PPR_PPC = -2.0M,
+                    Contract = 102,
+                    HundredPercent = 100,
+                    HHSC_Publish_Date = DateTime.ParseExact("septiembre 2021", "MMMM yyyy", CultureInfo.CreateSpecificCulture("es-ES")),
+                    CHIRP_Rate = 34
+                },
+                new() {
+                    NPI = 1003885641,
+                    Month = "November2021",
+                    NpiMonth = "1003885641November2021",
+                    IpRate = 41,
+                    ProviderName = "CHRISTUS SPOHN HEALTH SYSTEM CORPORATION",
+                    HospitalPhysicalCity = "ALICE, TX 78332-4261",
+                    HospitalPhysicalStreetAddress = "2500 E MAIN ST",
+                    HospitalClass = "Rural",
+                    SDA = 8228.94m,
+                    DeliverySDA = 9501.94m,
+                    PPR_PPC = -2.0M,
+                    Contract = 102,
+                    HundredPercent = 100,
+                    HHSC_Publish_Date = DateTime.ParseExact("octubre 2021", "MMMM yyyy", CultureInfo.CreateSpecificCulture("es-ES")),
+                    CHIRP_Rate = 34
+                },
+            };
+
+            await _context.HospitalRates.AddRangeAsync(hospitalRates);
             await _context.SaveChangesAsync();
         }
     }
